@@ -4,8 +4,7 @@ from sklearn import svm
 from sklearn.linear_model import LogisticRegression
 from sklearn import preprocessing
 from sklearn.pipeline import make_pipeline
-import pandas as pd
-import numpy as np
+
 import matplotlib.pyplot as plt
 import sys
 from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay
@@ -13,7 +12,7 @@ import load_data
 
 def hw1():
     #choose dataset 1 or dataset 2
-    db = load_data.load_data("/Users/nunziadambrosio/Documents/hw1-machine-learning/dataset1.csv")
+    db = load_data.load_data("./dataset1.csv")
     print("dataset loaded")
 
     X_train, X_test, y_train, y_test = train_test_split(db[0], db[1], test_size=0.2, random_state=1)
